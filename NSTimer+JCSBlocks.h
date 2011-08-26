@@ -14,6 +14,6 @@ typedef void (^timerCallback_t)();
 
 @interface NSTimer (JCSBlocks)
 
-+ (NSTimer *)scheduledTimerWithTimeInterval:(NSTimeInterval)seconds repeats:(BOOL)repeats blockHandler:(timerCallback_t)block;
++ (NSTimer *)jcs_scheduledTimerWithTimeInterval:(NSTimeInterval)seconds repeats:(BOOL)repeats blockHandler:(timerCallback_t)block;
 
 @end
