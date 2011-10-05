@@ -7,6 +7,7 @@
 //
 //  Additions to NSTimer that allow it to use blocks as callbacks
 //  Requires standard PCH macros for ZAssert()
+//  Requires compilation with ARC
 
 #import <Foundation/NSTimer.h>
 

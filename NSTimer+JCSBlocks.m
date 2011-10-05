@@ -17,10 +17,9 @@
 @implementation NSTimer (JCSBlocks)
 
 + (NSTimer *)jcs_scheduledTimerWithTimeInterval:(NSTimeInterval)seconds repeats:(BOOL)repeats blockHandler:(timerCallback_t)block {
-    return [self scheduledTimerWithTimeInterval:seconds target:self selector:@selector(handleBlockWithTimer:) userInfo:[[block copy] autorelease] repeats:repeats];
+    return [self scheduledTimerWithTimeInterval:seconds target:self selector:@selector(handleBlockWithTimer:) userInfo:[block copy] repeats:repeats];
     
 }
-
 
 @end
 
