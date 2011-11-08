@@ -10,14 +10,14 @@
 
 @interface NSTimer (JCSBlocks_Private)
 
-+ (void)handleBlockWithTimer:(NSTimer *)timer;
++ (void)jcs_handleBlockWithTimer:(NSTimer *)timer;
 
 @end
 
 @implementation NSTimer (JCSBlocks)
 
 + (NSTimer *)jcs_scheduledTimerWithTimeInterval:(NSTimeInterval)seconds repeats:(BOOL)repeats blockHandler:(timerCallback_t)block {
-    return [self scheduledTimerWithTimeInterval:seconds target:self selector:@selector(handleBlockWithTimer:) userInfo:[block copy] repeats:repeats];
+    return [self scheduledTimerWithTimeInterval:seconds target:self selector:@selector(jcs_handleBlockWithTimer:) userInfo:[block copy] repeats:repeats];
     
 }
 
@@ -25,7 +25,7 @@
 
 @implementation NSTimer (JCSBlocks_Private)
 
-+ (void)handleBlockWithTimer:(NSTimer *)timer {
++ (void)jcs_handleBlockWithTimer:(NSTimer *)timer {
     ZAssert(([timer isValid] && [timer userInfo]), @"the timer is not valid");
     
     timerCallback_t block = [timer userInfo];
