@@ -1,0 +1,43 @@
+h1. NSTimer+JCSBlocks
+
+An extension of NSTimer that lets you use a block to be run when the timer fires instead of passing a callback method.
+
+There are two methods; one which lets you fires an optionally repeating timer with a block, and another which lets you fire a timer repeatedly, but which can be stopped from within the passed block.
+
+h2. Branch structure for submodules
+
+There are two branches to this repository, *master* and *demo*. If you just want to use the class extension, the *master* branch is the one you should be using.
+
+h3. The master Branch
+
+The *master* branch just contains the class files and this README file. This is the branch to use if you are installing the class files as a Git submodule. As submodules are added in a headless state it is often preferable to explicitly state the branch you are cloning. So this is the command I recommend you use:
+
+bc. git submodule add -b master https://github.com/Abizern/NSTimer-JCSBlocks
+
+h3. The demo Branch
+
+the *demo* branch contains a very simple example of the use of this class extension. No development of the main files should be done on that branch.
+
+Changes made to the master branch will be merged across to demo, so it should always remain current with respect to master.
+
+h3. Updates
+
+To keep up to date with the latest changes `cd` into the directory that contains this submodule and pull the newest changes as usual
+
+bc. git pull origin
+
+h3. Artefacts
+
+Sometimes, there may be artefacts left over when switching from master to production. These are files that are ignored by Git and are easily cleaned up by running
+
+bc. git clean -dxf
+
+h2. Licensed under the MIT Licence
+
+Copyright (c) 2011 Abizer Nasir
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
