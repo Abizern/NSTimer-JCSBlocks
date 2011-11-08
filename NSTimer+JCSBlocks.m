@@ -4,6 +4,7 @@
 //
 //  Created by Abizer Nasir on 26/08/11
 //  Copyright 2011 Jungle Candy Software. All rights reserved.
+//  Licences under the MIT Licence. See the README for details.
 //
 
 #import "NSTimer+JCSBlocks.h"
@@ -22,7 +23,7 @@
     
 }
 
-+ (NSTimer *)jcs_scheduledInterrubtableTimerWithTimeInterval:(NSTimeInterval)seconds blockHandler:(interruptableTimerCallback_t)block{
++ (NSTimer *)jcs_scheduledInterruptableTimerWithTimeInterval:(NSTimeInterval)seconds blockHandler:(interruptableTimerCallback_t)block{
     return [self scheduledTimerWithTimeInterval:seconds target:self selector:@selector(jcs_handleBlockWithInterruptableTimer:) userInfo:[block copy] repeats:YES];
 }
 
