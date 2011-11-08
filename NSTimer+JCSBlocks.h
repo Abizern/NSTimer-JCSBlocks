@@ -36,7 +36,7 @@ typedef void (^interruptableTimerCallback_t)(BOOL *stop);
  @return An NSTimer that will fire events as configured.
  @param seconds NSInterval. The number of seconds between the the firing of the timer.
  @param repeats BOOL. Whether the timer should be repeating or not.
- @param block. A block which has a void return and takes no paramaters. This is run whenever the timer fires.
+ @param block A block which has a void return and takes no paramaters. This is run whenever the timer fires.
  The type is timerCallback_t which is defined as:
  
      typedef void (^timerCallback_t)();
