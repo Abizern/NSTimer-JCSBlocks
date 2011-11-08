@@ -20,13 +20,13 @@ the *demo* branch contains a very simple example of the use of this class extens
 
 Changes made to the master branch will be merged across to demo, so it should always remain current with respect to master.
 
-h3. Updates
+h2. Updates
 
 To keep up to date with the latest changes `cd` into the directory that contains this submodule and pull the newest changes as usual
 
 bc. git pull origin
 
-h3. Artefacts
+h2. Artefacts
 
 Sometimes, there may be artefacts left over when switching from master to production. These are files that are ignored by Git and are easily cleaned up by running
 
