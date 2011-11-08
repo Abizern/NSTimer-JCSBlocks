@@ -11,6 +11,7 @@
 @interface NSTimer (JCSBlocks_Private)
 
 + (void)jcs_handleBlockWithTimer:(NSTimer *)timer;
++ (void)jcs_handleBlockWithInterruptableTimer:(NSTimer *)timer;
 
 @end
 
@@ -21,6 +22,10 @@
     
 }
 
++ (NSTimer *)jcs_scheduledInterrubtableTimerWithTimeInterval:(NSTimeInterval)seconds blockHandler:(interruptableTimerCallback_t)block{
+    return [self scheduledTimerWithTimeInterval:seconds target:self selector:@selector(jcs_handleBlockWithInterruptableTimer:) userInfo:[block copy] repeats:YES];
+}
+
 @end
 
 @implementation NSTimer (JCSBlocks_Private)
@@ -29,7 +34,22 @@
     ZAssert(([timer isValid] && [timer userInfo]), @"the timer is not valid");
     
     timerCallback_t block = [timer userInfo];
+    
     block();
+}
+
++ (void)jcs_handleBlockWithInterruptableTimer:(NSTimer *)timer {
+    ZAssert(([timer isValid] && [timer userInfo]), @"the timer is not valid");
+    
+    interruptableTimerCallback_t block = [timer userInfo];
+    
+    BOOL stop;
+    block(&stop);
+    
+    if (stop) {
+        [timer invalidate];
+        timer = nil;
+    }
 }
 
 @end
