@@ -1,0 +1,299 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EE6CEBA91469B02D00C28147 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6CEBA81469B02D00C28147 /* Cocoa.framework */; };
+		EE6CEBB31469B02D00C28147 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EE6CEBB11469B02D00C28147 /* InfoPlist.strings */; };
+		EE6CEBB51469B02D00C28147 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6CEBB41469B02D00C28147 /* main.m */; };
+		EE6CEBBC1469B02D00C28147 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6CEBBB1469B02D00C28147 /* AppDelegate.m */; };
+		EE6CEBBF1469B02E00C28147 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE6CEBBD1469B02E00C28147 /* MainMenu.xib */; };
+		EE6CEBC81469B09B00C28147 /* NSTimer+JCSBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6CEBC71469B09B00C28147 /* NSTimer+JCSBlocks.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EE6CEBA41469B02D00C28147 /* TimerTester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimerTester.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE6CEBA81469B02D00C28147 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		EE6CEBAB1469B02D00C28147 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		EE6CEBAC1469B02D00C28147 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		EE6CEBAD1469B02D00C28147 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EE6CEBB01469B02D00C28147 /* TimerTester-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TimerTester-Info.plist"; sourceTree = "<group>"; };
+		EE6CEBB21469B02D00C28147 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EE6CEBB41469B02D00C28147 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EE6CEBB61469B02D00C28147 /* TimerTester-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TimerTester-Prefix.pch"; sourceTree = "<group>"; };
+		EE6CEBBA1469B02D00C28147 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EE6CEBBB1469B02D00C28147 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EE6CEBBE1469B02E00C28147 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		EE6CEBC61469B09B00C28147 /* NSTimer+JCSBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+JCSBlocks.h"; sourceTree = SOURCE_ROOT; };
+		EE6CEBC71469B09B00C28147 /* NSTimer+JCSBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+JCSBlocks.m"; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE6CEBA11469B02D00C28147 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE6CEBA91469B02D00C28147 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EE6CEB991469B02D00C28147 = {
+			isa = PBXGroup;
+			children = (
+				EE6CEBAE1469B02D00C28147 /* TimerTester */,
+				EE6CEBA71469B02D00C28147 /* Frameworks */,
+				EE6CEBA51469B02D00C28147 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EE6CEBA51469B02D00C28147 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE6CEBA41469B02D00C28147 /* TimerTester.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE6CEBA71469B02D00C28147 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EE6CEBA81469B02D00C28147 /* Cocoa.framework */,
+				EE6CEBAA1469B02D00C28147 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EE6CEBAA1469B02D00C28147 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EE6CEBAB1469B02D00C28147 /* AppKit.framework */,
+				EE6CEBAC1469B02D00C28147 /* CoreData.framework */,
+				EE6CEBAD1469B02D00C28147 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		EE6CEBAE1469B02D00C28147 /* TimerTester */ = {
+			isa = PBXGroup;
+			children = (
+				EE6CEBBA1469B02D00C28147 /* AppDelegate.h */,
+				EE6CEBBB1469B02D00C28147 /* AppDelegate.m */,
+				EE6CEBBD1469B02E00C28147 /* MainMenu.xib */,
+				EE6CEBC51469B07E00C28147 /* Categories */,
+				EE6CEBAF1469B02D00C28147 /* Supporting Files */,
+			);
+			path = TimerTester;
+			sourceTree = "<group>";
+		};
+		EE6CEBAF1469B02D00C28147 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EE6CEBB01469B02D00C28147 /* TimerTester-Info.plist */,
+				EE6CEBB11469B02D00C28147 /* InfoPlist.strings */,
+				EE6CEBB41469B02D00C28147 /* main.m */,
+				EE6CEBB61469B02D00C28147 /* TimerTester-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EE6CEBC51469B07E00C28147 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				EE6CEBC61469B09B00C28147 /* NSTimer+JCSBlocks.h */,
+				EE6CEBC71469B09B00C28147 /* NSTimer+JCSBlocks.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE6CEBA31469B02D00C28147 /* TimerTester */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE6CEBC21469B02E00C28147 /* Build configuration list for PBXNativeTarget "TimerTester" */;
+			buildPhases = (
+				EE6CEBA01469B02D00C28147 /* Sources */,
+				EE6CEBA11469B02D00C28147 /* Frameworks */,
+				EE6CEBA21469B02D00C28147 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TimerTester;
+			productName = TimerTester;
+			productReference = EE6CEBA41469B02D00C28147 /* TimerTester.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE6CEB9B1469B02D00C28147 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "Jungle Candy Software";
+			};
+			buildConfigurationList = EE6CEB9E1469B02D00C28147 /* Build configuration list for PBXProject "TimerTester" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EE6CEB991469B02D00C28147;
+			productRefGroup = EE6CEBA51469B02D00C28147 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE6CEBA31469B02D00C28147 /* TimerTester */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE6CEBA21469B02D00C28147 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE6CEBB31469B02D00C28147 /* InfoPlist.strings in Resources */,
+				EE6CEBBF1469B02E00C28147 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE6CEBA01469B02D00C28147 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE6CEBB51469B02D00C28147 /* main.m in Sources */,
+				EE6CEBBC1469B02D00C28147 /* AppDelegate.m in Sources */,
+				EE6CEBC81469B09B00C28147 /* NSTimer+JCSBlocks.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EE6CEBB11469B02D00C28147 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE6CEBB21469B02D00C28147 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EE6CEBBD1469B02E00C28147 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE6CEBBE1469B02E00C28147 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EE6CEBC01469B02E00C28147 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		EE6CEBC11469B02E00C28147 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		EE6CEBC31469B02E00C28147 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TimerTester/TimerTester-Prefix.pch";
+				INFOPLIST_FILE = "TimerTester/TimerTester-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EE6CEBC41469B02E00C28147 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TimerTester/TimerTester-Prefix.pch";
+				INFOPLIST_FILE = "TimerTester/TimerTester-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE6CEB9E1469B02D00C28147 /* Build configuration list for PBXProject "TimerTester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE6CEBC01469B02E00C28147 /* Debug */,
+				EE6CEBC11469B02E00C28147 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE6CEBC21469B02E00C28147 /* Build configuration list for PBXNativeTarget "TimerTester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE6CEBC31469B02E00C28147 /* Debug */,
+				EE6CEBC41469B02E00C28147 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EE6CEB9B1469B02D00C28147 /* Project object */;
+}
