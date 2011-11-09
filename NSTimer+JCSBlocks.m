@@ -9,43 +9,50 @@
 
 #import "NSTimer+JCSBlocks.h"
 
-@interface NSTimer (JCSBlocks_Private)
-
-+ (void)jcs_handleBlockWithTimer:(NSTimer *)timer;
-+ (void)jcs_handleBlockWithInterruptableTimer:(NSTimer *)timer;
+@interface JCSTimerBlockHandler : NSObject
+@property (nonatomic, strong) id block;
+- (void)jcs_handleBlockWithTimer:(NSTimer *)timer;
+- (void)jcs_handleBlockWithInterruptableTimer:(NSTimer *)timer;
 
 @end
 
 @implementation NSTimer (JCSBlocks)
 
 + (NSTimer *)jcs_scheduledTimerWithTimeInterval:(NSTimeInterval)seconds repeats:(BOOL)repeats blockHandler:(timerCallback_t)block {
-    return [self scheduledTimerWithTimeInterval:seconds target:self selector:@selector(jcs_handleBlockWithTimer:) userInfo:[block copy] repeats:repeats];
-    
+	
+	JCSTimerBlockHandler *blockHandler = [[JCSTimerBlockHandler alloc] init];
+	blockHandler.block = [block copy];
+	
+    return [self scheduledTimerWithTimeInterval:seconds target:blockHandler selector:@selector(jcs_handleBlockWithTimer:) userInfo:nil repeats:repeats];
 }
 
 + (NSTimer *)jcs_scheduledInterruptableTimerWithTimeInterval:(NSTimeInterval)seconds blockHandler:(interruptableTimerCallback_t)block{
-    return [self scheduledTimerWithTimeInterval:seconds target:self selector:@selector(jcs_handleBlockWithInterruptableTimer:) userInfo:[block copy] repeats:YES];
+	
+	JCSTimerBlockHandler *blockHandler = [[JCSTimerBlockHandler alloc] init];
+	blockHandler.block = [block copy];
+	
+    return [self scheduledTimerWithTimeInterval:seconds target:blockHandler selector:@selector(jcs_handleBlockWithInterruptableTimer:) userInfo:nil repeats:YES];
 }
 
 @end
 
-@implementation NSTimer (JCSBlocks_Private)
+@implementation JCSTimerBlockHandler
 
-+ (void)jcs_handleBlockWithTimer:(NSTimer *)timer {
-    ZAssert(([timer isValid] && [timer userInfo]), @"the timer is not valid");
+@synthesize block;
+
+- (void)jcs_handleBlockWithTimer:(NSTimer *)timer {
     
-    timerCallback_t block = [timer userInfo];
+    timerCallback_t callbackBlock = self.block;
     
-    block();
+    callbackBlock();
 }
 
-+ (void)jcs_handleBlockWithInterruptableTimer:(NSTimer *)timer {
-    ZAssert(([timer isValid] && [timer userInfo]), @"the timer is not valid");
+- (void)jcs_handleBlockWithInterruptableTimer:(NSTimer *)timer {
     
-    interruptableTimerCallback_t block = [timer userInfo];
+    interruptableTimerCallback_t callbackBlock = self.block;
     
     BOOL stop;
-    block(&stop);
+    callbackBlock(&stop);
     
     if (stop) {
         [timer invalidate];
