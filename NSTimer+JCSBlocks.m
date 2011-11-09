@@ -18,7 +18,7 @@
 
 @implementation NSTimer (JCSBlocks)
 
-+ (NSTimer *)jcs_scheduledTimerWithTimeInterval:(NSTimeInterval)seconds repeats:(BOOL)repeats blockHandler:(timerCallback_t)block {
++ (NSTimer *)jcs_scheduledTimerWithTimeInterval:(NSTimeInterval)seconds repeats:(BOOL)repeats blockHandler:(JCSTimerCallback)block {
 	
 	JCSTimerBlockHandler *blockHandler = [[JCSTimerBlockHandler alloc] init];
 	blockHandler.block = [block copy];
@@ -26,7 +26,7 @@
     return [self scheduledTimerWithTimeInterval:seconds target:blockHandler selector:@selector(jcs_handleBlockWithTimer:) userInfo:nil repeats:repeats];
 }
 
-+ (NSTimer *)jcs_scheduledInterruptableTimerWithTimeInterval:(NSTimeInterval)seconds blockHandler:(interruptableTimerCallback_t)block{
++ (NSTimer *)jcs_scheduledInterruptableTimerWithTimeInterval:(NSTimeInterval)seconds blockHandler:(JCSInterruptableTimerCallback)block{
 	
 	JCSTimerBlockHandler *blockHandler = [[JCSTimerBlockHandler alloc] init];
 	blockHandler.block = [block copy];
@@ -42,14 +42,14 @@
 
 - (void)jcs_handleBlockWithTimer:(NSTimer *)timer {
     
-    timerCallback_t callbackBlock = self.block;
+    JCSTimerCallback callbackBlock = self.block;
     
     callbackBlock();
 }
 
 - (void)jcs_handleBlockWithInterruptableTimer:(NSTimer *)timer {
     
-    interruptableTimerCallback_t callbackBlock = self.block;
+    JCSInterruptableTimerCallback callbackBlock = self.block;
     
     BOOL stop;
     callbackBlock(&stop);
