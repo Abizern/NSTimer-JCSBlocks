@@ -26,8 +26,8 @@
  you how they are used.
  
 */
-typedef void (^timerCallback_t)();
-typedef void (^interruptableTimerCallback_t)(BOOL *stop);
+typedef void (^JCSTimerCallback)();
+typedef void (^JCSInterruptableTimerCallback)(BOOL *stop);
 
 @interface NSTimer (JCSBlocks)
 
@@ -37,12 +37,13 @@ typedef void (^interruptableTimerCallback_t)(BOOL *stop);
  @param seconds NSInterval. The number of seconds between the the firing of the timer.
  @param repeats BOOL. Whether the timer should be repeating or not.
  @param block A block which has a void return and takes no paramaters. This is run whenever the timer fires.
- The type is timerCallback_t which is defined as:
  
-     typedef void (^timerCallback_t)();
+ The type is JCSTimerCallback which is defined as:
+ 
+     typedef void (^JCSTimerCallback)();
  
  */
-+ (NSTimer *)jcs_scheduledTimerWithTimeInterval:(NSTimeInterval)seconds repeats:(BOOL)repeats blockHandler:(timerCallback_t)block;
++ (NSTimer *)jcs_scheduledTimerWithTimeInterval:(NSTimeInterval)seconds repeats:(BOOL)repeats blockHandler:(JCSTimerCallback)block;
 
 
 /** Create a repeating timer which can be stopped from within the passed block
@@ -54,11 +55,11 @@ typedef void (^interruptableTimerCallback_t)(BOOL *stop);
  Setting this parameter to `NO` from within the block will prevent any more events to be fired by the timer. 
  Additionally, the timer will be invalidated and set to nil when it is stopped this way.
  
- The type is interruptableTimerCallback_t which is defined as 
+ The type is JCSInterruptableTimerCallback which is defined as 
  
-     typedef void (^interruptableTimerCallback_t)(BOOL *stop);
+     typedef void (^JCSInterruptableTimerCallback)(BOOL *stop);
  
  */
-+ (NSTimer *)jcs_scheduledInterruptableTimerWithTimeInterval:(NSTimeInterval)seconds blockHandler:(interruptableTimerCallback_t)block;
++ (NSTimer *)jcs_scheduledInterruptableTimerWithTimeInterval:(NSTimeInterval)seconds blockHandler:(JCSInterruptableTimerCallback)block;
 
 @end
