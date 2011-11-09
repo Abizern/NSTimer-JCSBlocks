@@ -1,0 +1,412 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>NSTimer(JCSBlocks) Category Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.0.4 (build 703)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">NSTimer+JCSBlocks </a></h1>
+				<a id="developerHome" href="../index.html">Jungle Candy Software</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">NSTimer(JCSBlocks) Category Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	
+	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/jcs_scheduledInterruptableTimerWithTimeInterval:blockHandler:">&nbsp;&nbsp;&nbsp;&nbsp;+ jcs_scheduledInterruptableTimerWithTimeInterval:blockHandler:</option>
+	
+	<option value="//api/name/jcs_scheduledTimerWithTimeInterval:repeats:blockHandler:">&nbsp;&nbsp;&nbsp;&nbsp;+ jcs_scheduledTimerWithTimeInterval:repeats:blockHandler:</option>
+	
+	
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/jcs_scheduledInterruptableTimerWithTimeInterval:blockHandler:">jcs_scheduledInterruptableTimerWithTimeInterval:blockHandler:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/jcs_scheduledTimerWithTimeInterval:repeats:blockHandler:">jcs_scheduledTimerWithTimeInterval:repeats:blockHandler:</a></span></li>
+	
+</ul></li>
+
+
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="NSTimer(JCSBlocks) Category Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">NSTimer(JCSBlocks) Category Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">NSTimer+JCSBlocks.h<br />NSTimer+JCSBlocks.m</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>An NSTimer Extension that runs a block when the timer is fired.</p>
+
+<p>Blocks are frequently more convenient to use instead of callbacks. They appear in the same context as the code that calls
+them and, and it&rsquo;s easier to pass state information to them at the same time.</p>
+
+<p>This extension creates two methods, one which creates an optionally repeating timer which fires a block, and the other creates
+a repeating timer but passes a reference to a stop parameter to the block so the timer can be stopped from within the block.</p><div class="warning"><p>This code uses a macro, ZAssert, which requires that you make additions to your Project&rsquo;s PCH file.
+You can get these macros from <a href="http://gist.github.com/325926">http://gist.github.com/325926</a> which also contains links to show
+you how they are used.</p></div>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/jcs_scheduledTimerWithTimeInterval:repeats:blockHandler:">+&nbsp;jcs_scheduledTimerWithTimeInterval:repeats:blockHandler:</a></code>
+		<span class="tooltip"><p>Create an optionally repeating timer with a block to run when the timer is fired.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/jcs_scheduledInterruptableTimerWithTimeInterval:blockHandler:">+&nbsp;jcs_scheduledInterruptableTimerWithTimeInterval:blockHandler:</a></code>
+		<span class="tooltip"><p>Create a repeating timer which can be stopped from within the passed block</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/jcs_scheduledInterruptableTimerWithTimeInterval:blockHandler:" title="jcs_scheduledInterruptableTimerWithTimeInterval:blockHandler:"></a>
+	<h3 class="subsubtitle method-title">jcs_scheduledInterruptableTimerWithTimeInterval:blockHandler:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Create a repeating timer which can be stopped from within the passed block</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (NSTimer *)jcs_scheduledInterruptableTimerWithTimeInterval:(NSTimeInterval)<em>seconds</em> blockHandler:(interruptableTimerCallback_t)<em>block</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>seconds</em></dt>
+			<dd><p>NSInterval. The number of seconds between the the firing of the timer.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>block</em></dt>
+			<dd><p>A block which has a void return but has a <code>BOOL *stop</code> parameter.</p>
+
+<p>Setting this parameter to <code>NO</code> from within the block will prevent any more events to be fired by the timer.
+Additionally, the timer will be invalidated and set to nil when it is stopped this way.</p>
+
+<p>The type is interruptableTimerCallback_t which is defined as</p>
+
+<pre><code> typedef void (^interruptableTimerCallback_t)(BOOL *stop);
+</code></pre></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An NSTimer that will fire events as configured.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Create a repeating timer which can be stopped from within the passed block</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSTimer+JCSBlocks.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/jcs_scheduledTimerWithTimeInterval:repeats:blockHandler:" title="jcs_scheduledTimerWithTimeInterval:repeats:blockHandler:"></a>
+	<h3 class="subsubtitle method-title">jcs_scheduledTimerWithTimeInterval:repeats:blockHandler:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Create an optionally repeating timer with a block to run when the timer is fired.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (NSTimer *)jcs_scheduledTimerWithTimeInterval:(NSTimeInterval)<em>seconds</em> repeats:(BOOL)<em>repeats</em> blockHandler:(timerCallback_t)<em>block</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>seconds</em></dt>
+			<dd><p>NSInterval. The number of seconds between the the firing of the timer.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>repeats</em></dt>
+			<dd><p>BOOL. Whether the timer should be repeating or not.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>block</em></dt>
+			<dd><p>A block which has a void return and takes no paramaters. This is run whenever the timer fires.
+The type is timerCallback_t which is defined as:</p>
+
+<pre><code> typedef void (^timerCallback_t)();
+</code></pre></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An NSTimer that will fire events as configured.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Create an optionally repeating timer with a block to run when the timer is fired.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSTimer+JCSBlocks.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2011 Jungle Candy Software. All rights reserved. (Last updated: 2011-11-09)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.4 (build 703)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+		</script>
+	</body>
+</html>
