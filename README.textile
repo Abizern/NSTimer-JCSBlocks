@@ -2,7 +2,7 @@ h1. NSTimer+JCSBlocks
 
 An extension of NSTimer that lets you use a block to be run when the timer fires instead of passing a callback method.
 
-There are two methods; one which lets you fires an optionally repeating timer with a block, and another which lets you fire a timer repeatedly, but which can be stopped from within the passed block.
+There are two methods; one which lets you fire an optionally repeating timer with a block, and another which lets you fire a timer repeatedly, but which can be stopped from within the passed block.
 
 h2. Branch structure for submodules
 
@@ -33,6 +33,8 @@ Sometimes, there may be artefacts left over when switching from master to produc
 bc. git clean -dxf
 
 h2. Licensed under the MIT Licence
+
+Use it, fix it, or be inspired to replace callbacks with blocks in your own code!
 
 Copyright (c) 2011 Abizer Nasir
 
