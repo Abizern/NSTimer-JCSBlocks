@@ -22,7 +22,7 @@ Changes made to the master branch will be merged across to demo, so it should al
 
 h2. Documentation
 
-The generation for this extension is generated from the header comments from "appledoc":http://www.gentlebytes.com/home/appledocapp, and is available "online here":http://abizern.github.com/NSTimer-JCSBlocks/docs/index.html.
+The generation for this extension is generated from the header comments from "appledoc":http://gentlebytes.com/appledoc/, and is available "online here":http://abizern.github.com/NSTimer-JCSBlocks/docs/index.html.
 
 h2. Updates
 
