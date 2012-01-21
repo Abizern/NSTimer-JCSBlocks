@@ -7,8 +7,6 @@
 //  Licences under the MIT Licence. See the README for details.
 //
 //  Additions to NSTimer that allow it to use blocks as callbacks
-//  Requires standard PCH macros for ZAssert()
-//    - See http://gist.github.com/325926
 //  Requires compilation with ARC
 
 #import <Foundation/NSTimer.h>
@@ -20,10 +18,6 @@
  
  This extension creates two methods, one which creates an optionally repeating timer which fires a block, and the other creates
  a repeating timer but passes a reference to a stop parameter to the block so the timer can be stopped from within the block.
- 
- @warning This code uses a macro, ZAssert, which requires that you make additions to your Project's PCH file.
- You can get these macros from [http://gist.github.com/325926](http://gist.github.com/325926) which also contains links to show
- you how they are used.
  
 */
 typedef void (^JCSTimerCallback)();
