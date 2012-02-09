@@ -25,74 +25,72 @@
       An extension to NSTimer that allows you to pass a block to handle timer events instead of using a callback method.
     </div>
 
-    
+
       <p>There are two methods; one which lets you fires an optionally repeating timer with a block, and another which lets you fire a timer repeatedly, but which can be stopped from within the passed block.</p>
-    
+
 
       <h2>Dependencies</h2>
-			<p>There is no memory management code in this extension, so it will work on Mac OS and iOS with ARC and Mac OS with GC.</p>
-			
-      <p>This code uses a macro, ZAssert, which requires that you make additions to your Project’s PCH file. You can get these macros from <a href="http://gist.github.com/325926">http://gist.github.com/325926</a>  which also contains links to show you how they are used.</p>
-      
+      <p>There is no memory management code in this extension, so it will work on Mac OS and iOS whether you are using Manual Reference Counting, ARC or Garbage Collection in your project.</p>
+
       <h2>Documentation</h2>
       <p>Documentation is generated from the code by <a href="http://www.gentlebytes.com/home/appledocapp/">appledoc</a> and is available <a href="http://abizern.github.com/NSTimer-JCSBlocks/docs/index.html">online here</a>.
-      
+
       <h2>Branch structure for submodules</h2>
-      
+
       <p>There are two branches to this repository, <strong>master</strong> and <strong>demo</strong>. If you just want to use the class extension, the <strong>master</strong> branch is the one you should be using.</p>
-      
-      
+
+
       	<h3>The master Branch</h3>
-      
-      
+
+
       	<p>The <strong>master</strong> branch just contains the class files and this <span class="caps">README</span> file. This is the branch to use if you are installing the class files as a Git submodule. As submodules are added in a headless state it is often preferable to explicitly state the branch you are cloning. So this is the command I recommend you use:</p>
-      
-      
+
+
       	<pre><code>git submodule add -b master https://github.com/Abizern/NSTimer-JCSBlocks</code></pre>
-      
-      
+
+
       	<h3>The demo Branch</h3>
-      
-      
+
+
       	<p>the <strong>demo</strong> branch contains a very simple example of the use of this class extension. No development of the main files should be done on that branch.</p>
-      
-      
+
+
       	<p>Changes made to the master branch will be merged across to demo, so it should always remain current with respect to master.</p>
-      
-      
+
+
       	<h2>Updates</h2>
-      
-      
+
+
       	<p>To keep up to date with the latest changes `cd` into the directory that contains this submodule and pull the newest changes as usual</p>
-      
-      
+
+
       	<pre><code>git pull origin</code></pre>
-      
-      
+
+
       	<h2>Artefacts</h2>
-      
-      
+
+
       	<p>Sometimes, there may be artefacts left over when switching from master to production. These are files that are ignored by Git and are easily cleaned up by running</p>
-      
-      
+
+
       	<pre><code>git clean -dxf</code></pre>
-    
-      
+
+
       <h2>Install</h2>
       <p>Clone the master branch</p>
-    
-    
+
+
       <h2>License</h2>
       <p>MIT Licence</p>
-    
 
-    
+
+
       <h2>Authors</h2>
       <p>Abizer Nasir (abizer@junglecandy.com)
 <br/>      </p>
-    
 
-    
+
+
 
     <h2>Download</h2>
     <p>
